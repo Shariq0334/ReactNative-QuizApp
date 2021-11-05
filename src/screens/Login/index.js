@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     color: "#7d7d7d"
   },
   signupLink: {
-    fontWeight: "bolder",
+    fontWeight: "bold",
     color: "#08ad69"
   }
 });

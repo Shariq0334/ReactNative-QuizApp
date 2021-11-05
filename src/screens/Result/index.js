@@ -4,13 +4,13 @@ import DEFAULT from '../../assets/images/logo.png';
 
 const Result = ({navigation}) => {
   return(
-    <View>
+    <View style={styles.container}>
       <View>
         <Text style={styles.title}>
           Result
         </Text>
         <Text style={styles.subtitle}>
-          The result of your choices
+         Passed Congratulations
         </Text>
       </View>
       <View>
@@ -29,7 +29,7 @@ const Result = ({navigation}) => {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Login')} activeOpacity={0.7}>
           <Text style={styles.button} >
-            Back to list
+            Back to Home
           </Text>
         </TouchableOpacity>
       </View>
@@ -38,16 +38,19 @@ const Result = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+   backgroundColor: "black"
+  },
   title: {
     width: "100%",
-    color: "#767e80",
+    color: "white",
     fontSize: 45,
     padding: 10,
     textAlign: "center"
   },
   subtitle: {
     width: "100%",
-    color: "#7d7d7d",
+    color: "white",
     fontSize: 16,
     padding: 5,
     textAlign: "center"
@@ -69,11 +72,11 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     marginHorizontal: "auto",
     paddingHorizontal: 40,
-    backgroundColor: "#000"
   },
   userPic: {
     width: 200,
-    height: 200
+    height: 200,
+    borderRadius: 300
   },
   buttonContainer: {
     width: "85%",

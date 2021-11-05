@@ -7,7 +7,7 @@ const UserPic = ({navigation}) => {
     <View>
       <View>
         <Text style={styles.title}>
-          User Pic
+          Your Picture
         </Text>
         <Text style={styles.subtitle}>
           Take your photo

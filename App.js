@@ -9,6 +9,9 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return(
+    // <QuizList/>
+    // <Questions/>
+    // <Result/>
     <NavigationContainer style={styles.container} >
       <Stack.Navigator initialRouteName="Signup" >
         <Stack.Screen

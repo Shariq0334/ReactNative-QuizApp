@@ -13,27 +13,27 @@ const QuizList = ({
     navigation.navigate('UserPic')
   }
   return(
-    <View>
-      <View>
+    <View style={styles.container} >
+      <View st>
         <Text style={styles.title}>
           Quiz List
         </Text>
         <Text style={styles.subtitle}>
-          Touch the quiz you want to take
+          Select the Category
         </Text>
       </View>
       <View style={styles.quizContainer} >
         <Text onPress={() => startQuiz()} style={styles.quiz} >
-          General Knowledge
+          HTML
         </Text>
         <Text onPress={() => startQuiz()} style={styles.quiz} >
-          Sports
+          Javascript
         </Text>
         <Text onPress={() => startQuiz()} style={styles.quiz} >
-          Web Development
+          Phyton  
         </Text>
         <Text onPress={() => startQuiz()} style={styles.quiz} >
-          World Affairs
+          CSS
         </Text>
       </View>
     </View>
@@ -41,9 +41,12 @@ const QuizList = ({
 };
 
 const styles = StyleSheet.create({
+  container : {
+      backgroundColor: "black"
+  },
   title: {
     width: "100%",
-    color: "#767e80",
+    color: "white",
     fontSize: 45,
     padding: 10,
     textAlign: "center"
@@ -62,13 +65,13 @@ const styles = StyleSheet.create({
   },
   quiz: {
     height: 60,
-    backgroundColor: "#e7e7e7",
+    backgroundColor: "#767e80",
     borderRadius: 25,
     marginBottom: 25,
     paddingTop: 20,
     textAlign: "center",
     fontSize: 18,
-    color: "#7d7d7d"
+    color: "white"
   }
 });
 

@@ -66,16 +66,16 @@ const Signup = ({
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={() => register()} activeOpacity={0.7}>
           <Text style={styles.button}>
-            {isLoading ? <ActivityIndicator color="#fff" size="large" /> : "Sign Up"}
+            {isLoading ? <ActivityIndicator style={styles.loader} color="#fff" size="large" /> : "Sign Up"}
           </Text>
         </TouchableOpacity>
       </View>
       <View>
-        <Text style={styles.loginText}>
+        <Text onClick={() => navigation.navigate('Login')} style={styles.loginText}>
           Already have an Account?&nbsp;
-          <a onClick={() => navigation.navigate('Login')}>
+          <TouchableOpacity onClick={() => navigation.navigate('Login')}>
             <Text style={styles.loginLink}>Login</Text>
-          </a>
+          </TouchableOpacity>
         </Text>
       </View>
     </View>
@@ -107,7 +107,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#e7e7e7",
     borderRadius: 25,
     marginBottom: 25,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
+    marginLeft: 60
   },
   buttonContainer: {
     width: "85%",
@@ -118,23 +119,29 @@ const styles = StyleSheet.create({
   button: {
     display: "flex",
     width: "100%",
-    height: 70,
+    height: 60,
     textAlign: "center",
     color: "#fff",
+    paddingTop:20,
     backgroundColor: "#000",
-    alignItems: "center",
-    justifyContent: "space-around",
+    // alignItems: "center",
+    // justifyContent: "center",
     borderRadius: 40,
     fontSize: 16,
-    backgroundColor: "#39eb9a"
+    backgroundColor: "#39eb9a",
+    marginLeft: 30
   },
   loginText: {
     textAlign: "center",
     color: "#7d7d7d"
   },
   loginLink: {
-    fontWeight: "bolder",
+    fontWeight: "bold",
     color: "#08ad69"
+  },
+  loader: {
+      paddingLeft:130,
+      paddingTop:15
   }
 });
 

@@ -11,12 +11,12 @@ const Questions = ({
   navigation
 }) => {
   const [timer, setTimer] = useState(300);
-  setInterval(() => {
+  setTimeout(() => {
     setTimer(timer - 1);
   }, 1000)
   return(
     <ScrollView>
-    <View>
+    <View style={styles.container}>
       <View>
         <Text style={styles.title}>
           Questions
@@ -28,21 +28,21 @@ const Questions = ({
           Question 1
         </Text>
         <Text style={styles.question}>
-          What is the correct option?
+          Choose the correct answer
         </Text>
       </View>
       <View style={styles.optionsContainer}>
         <Text style={styles.option}>
-          Option 1
+          HTML  
         </Text>
         <Text style={styles.option}>
-          Option 2
+          CSS
         </Text>
         <Text style={styles.option}>
-          Option 3
+          Javascript
         </Text>
         <Text style={styles.option}>
-          Option 4
+          Phyton
         </Text>
       </View>
       <View style={styles.buttonContainer}>
@@ -58,11 +58,15 @@ const Questions = ({
 };
 
 const styles = StyleSheet.create({
+  container : {
+      backgroundColor: "black"
+  },
   title: {
     width: "100%",
-    color: "#767e80",
+    color: "white",
     fontSize: 45,
-    textAlign: "center"
+    textAlign: "center",
+    marginBottom: 10
   },
   timer: {
     width: "20%",
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     width: "100%",
-    color: "#7d7d7d",
+    color: "white",
     fontSize: 16,
     padding: 5,
     textAlign: "center"
@@ -95,13 +99,13 @@ const styles = StyleSheet.create({
   },
   option: {
     height: 60,
-    backgroundColor: "#e7e7e7",
+    backgroundColor: "#767e80",
     borderRadius: 25,
     marginBottom: 25,
     paddingTop: 20,
     textAlign: "center",
     fontSize: 18,
-    color: "#7d7d7d"
+    color: "white"
   },
   buttonContainer: {
     width: "85%",
