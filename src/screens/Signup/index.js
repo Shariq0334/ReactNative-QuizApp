@@ -74,7 +74,7 @@ const Signup = ({
         <Text onClick={() => navigation.navigate('Login')} style={styles.loginText}>
           Already have an Account?&nbsp;
           <TouchableOpacity onClick={() => navigation.navigate('Login')}>
-            <Text style={styles.loginLink}>Login</Text>
+            <a >Login</a>
           </TouchableOpacity>
         </Text>
       </View>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginBottom: 25,
     paddingHorizontal: 20,
-    marginLeft: 60
+    // marginLeft: 60
   },
   buttonContainer: {
     width: "85%",
@@ -123,13 +123,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#fff",
     paddingTop:20,
+    paddingLeft:115,
     backgroundColor: "#000",
     // alignItems: "center",
     // justifyContent: "center",
     borderRadius: 40,
     fontSize: 16,
     backgroundColor: "#39eb9a",
-    marginLeft: 30
+    // marginLeft: 30
   },
   loginText: {
     textAlign: "center",
@@ -139,10 +140,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#08ad69"
   },
-  loader: {
-      paddingLeft:130,
-      paddingTop:15
-  }
+  // loader: {
+  //     paddingLeft:130,
+  //     paddingTop:15
+  // }
 });
 
 export default Signup;
